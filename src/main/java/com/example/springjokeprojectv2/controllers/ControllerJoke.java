@@ -5,6 +5,7 @@ import com.example.springjokeprojectv2.services.JokeService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class ControllerJoke {
@@ -16,10 +17,16 @@ public class ControllerJoke {
         this.jokeService = jokeService;
     }
 
-    @RequestMapping({"","/"})
+    @RequestMapping(value = {"","/"},method = RequestMethod.GET)
     public String getJoke(Model model){
         model.addAttribute("tellJoke",jokeService.getJoke());
         return "index";
     }
+    @RequestMapping(value = "/add",method = RequestMethod.POST)
+    public String addJoke(Model model){
+
+        return "adding";
+    }
+
 
 }
