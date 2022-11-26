@@ -13,6 +13,7 @@ public class JokeSerivceImpl implements JokeService{
         this.chuckNorrisQuotes = new ChuckNorrisQuotes();
     }
 
+      //Generating a joke from a class predefine into our program
     @Override
     public Joke getJoke() {
         return new Joke(this.chuckNorrisQuotes.getRandomQuote());

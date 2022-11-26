@@ -19,7 +19,6 @@ public class Joke implements Serializable {
     public void setJoke(String joke) {
         this.joke = joke;
     }
-    // TODO: 11/26/2022
 
     @Override
     public String toString() {
