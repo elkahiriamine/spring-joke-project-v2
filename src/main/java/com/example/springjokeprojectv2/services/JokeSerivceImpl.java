@@ -9,11 +9,11 @@ public class JokeSerivceImpl implements JokeService{
 
     private final ChuckNorrisQuotes chuckNorrisQuotes;
 
-    public JokeSerivceImpl() {
-        this.chuckNorrisQuotes = new ChuckNorrisQuotes();
+    public JokeSerivceImpl(ChuckNorrisQuotes chuckNorrisQuotes) {
+        this.chuckNorrisQuotes = chuckNorrisQuotes;
     }
 
-      //Generating a joke from a class predefine into our program
+    //Generating a joke from a class predefine into our program
     @Override
     public Joke getJoke() {
         return new Joke(this.chuckNorrisQuotes.getRandomQuote());

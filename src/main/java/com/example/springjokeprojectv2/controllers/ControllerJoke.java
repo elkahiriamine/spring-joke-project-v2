@@ -24,7 +24,6 @@ public class ControllerJoke {
     }
     @RequestMapping(value = "/add",method = RequestMethod.POST)
     public String addJoke(Model model){
-
         return "adding";
     }
 
